@@ -18,13 +18,12 @@ class Game:
         while True:
             self.__mainloop()
 
-        self.screen.fill('black')
-        pygame.display.update()
-        self.clock.tick(fps)
-
     def __mainloop(self):
         for event in pygame.event.get():
             self.__handle_event(event)
+        self.screen.fill('black')
+        pygame.display.update()
+        self.clock.tick(fps)
 
     def __handle_event(self, event):
         if event.type == pygame.QUIT:
