@@ -20,6 +20,11 @@ while [[ $# -gt 0 ]]; do
       shift # past argument
       shift # past value
       ;;
+    --pong)
+      GAME="examples/pong_example.py"
+      shift #past argument
+      shift #past value
+      ;;
     -m|--main)
       GAME="main.py"
       shift # past argument
